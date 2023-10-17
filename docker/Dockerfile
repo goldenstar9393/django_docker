@@ -17,3 +17,5 @@ RUN pip install -r docker/requirements.txt
 
 # Copy the Django project code into the container
 COPY . /django-tech-test/
+
+CMD ["python", "manage.py", "runserver", "127.0.0.1:8000"]
