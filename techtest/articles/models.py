@@ -7,3 +7,9 @@ class Article(models.Model):
     regions = models.ManyToManyField(
         'regions.Region', related_name='articles', blank=True
     )
+    authors = models.ManyToManyField(
+        'authors.Author', related_name='articles', blank=True
+    )
+
+    def __str__(self) -> str:
+        return f"{self.title} {self.content} {self.regions} {self.authors}"
