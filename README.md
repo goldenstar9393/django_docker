@@ -16,10 +16,10 @@
 - On command line do this: `~/.pyenv/versions/3.9.6/bin/python -m venv env`
 - This creates a folder called env. Then do this to activate the virtual environment: `source env/bin/activate`
 - Lastly do this to check that you are now on the correct Python version: `python --version`
-- You can install the dependencies with `pip install -r requirements.txt`
+- You can install the dependencies with `pip install -r docker/requirements.txt`
 - You should run `python setup_and_seed.py` to get a local database setup and seeded with lookup data
-- You can then run the app with `python manage.py runserver 0.0.0.0:8000` in the root directory
-
+- You can then run the app with `python manage.py runserver 127.0.0.1:8000` in the root directory
+- You can see the swagger documentation for API lists by visiting `http://127.0.0.1:8000/swagger`.
 ## Project Structure Notes
 
 - There are two django apps installed `articles` and `regions`
