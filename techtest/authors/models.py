@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-# techtask/Author/models.py
+# techtask/authors/models.py
 
 class Author(models.Model):
     first_name = models.CharField(max_length=100)

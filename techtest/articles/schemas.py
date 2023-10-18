@@ -1,9 +1,7 @@
 from marshmallow import validate
 from marshmallow import fields
-from marshmallow import Schema
-from marshmallow.decorators import post_load
-
 from rest_framework import serializers
+
 from techtest.articles.models import Article
 from techtest.regions.models import Region
 from techtest.regions.schemas import RegionSchema

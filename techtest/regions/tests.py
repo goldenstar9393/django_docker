@@ -56,7 +56,7 @@ class RegionListViewTestCase(TestCase):
 class RegionViewTestCase(TestCase):
     def setUp(self):
         self.region = Region.objects.create(code="AL", name="Albania")
-        self.url = reverse("region", kwargs={"region_id": self.region.id})
+        self.url = reverse("region", args=[1])
 
     def test_serializes_single_record_with_correct_data_shape_and_status_code(self):
         response = self.client.get(self.url)
@@ -94,5 +94,5 @@ class RegionViewTestCase(TestCase):
 
     def test_removes_region(self):
         response = self.client.delete(self.url)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 204)
         self.assertEqual(Region.objects.count(), 0)
